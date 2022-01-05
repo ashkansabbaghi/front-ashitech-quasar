@@ -1,0 +1,40 @@
+@import"var";
+
+@mixin responsive ($point) {
+
+    @if $point==min {
+        @media screen and (max-width : 400px) {
+            @content
+        }
+    }
+    @else if $point==s {
+        @media screen and (max-width : 550px) {
+            @content
+        }
+    }
+
+    @else if $point==m {
+        @media screen and (max-width : 767px) {
+            @content
+        }
+    }
+
+    @else if $point==t {
+        @media screen and (max-width : 991px) {
+            @content
+        }
+    }
+
+    @else if $point==pc {
+        @media only screen and (max-width : 1200px) {
+            @content
+        }
+    }
+
+    @else if $point==lg {
+        @media screen and (max-width : 1400px) {
+            @content
+        }
+    }
+
+}
